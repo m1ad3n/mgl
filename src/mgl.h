@@ -7,9 +7,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <string.h>
-#include <time.h>
+
+/* usefull macros */
 
 #define ERROR(msg, ...) {\
 	fprintf(stderr, "[ERROR]: " msg "\n", ##__VA_ARGS__);\
@@ -18,11 +18,14 @@
 
 #define INFO(msg, ...) fprintf(stdout, "[INFO]: " msg "\n", ##__VA_ARGS__);
 
+/* shader functions */
 GLuint read_shaders(char* content, char** vertex, char** fragment);
 GLuint compile_shader(const char* source, GLuint type);
 GLuint compile_program(char* path);
 GLint check_compile_errors(GLuint shader, const char* type);
 
-void time_it(const char* msg);
+/* buffer functions */
+GLuint mgl_gen_buffer(GLenum type, void* data, size_t data_len);
 
 #endif // TEX_HEADER
+

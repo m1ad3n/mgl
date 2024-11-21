@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -ggdb -Wno-uninitialized -Wno-format-extra-args
+CFLAGS = -O3 -Wall -Wextra -ggdb -Wno-uninitialized -Wno-format-extra-args
 LIBS = -lGL -lGLEW -lOpenGL -lglfw
 
 SRC_DIR = ./src
